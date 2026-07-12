@@ -1,0 +1,12 @@
+{
+  "name": "chip-ai",
+  "private": true,
+  "scripts": {
+    "test:core": "bash scripts/test-core.sh",
+    "test:protocol": "bash scripts/test-protocol.sh",
+    "test": "npm run test:core && npm run test:protocol",
+    "export:stub": "python3 tooling/export_stub_model.py",
+    "export:demo": "python3 tooling/export_demo_tflite.py",
+    "test:flutter": "cd mobile/flutter && flutter test"
+  }
+}
