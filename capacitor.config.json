@@ -1,0 +1,8 @@
+{
+  "appId": "com.skat.chipai",
+  "appName": "ChipAI",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": true
+  }
+}

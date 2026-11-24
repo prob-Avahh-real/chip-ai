@@ -2,7 +2,8 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-OUT="$ROOT/build"
+OUT="${CAI_BUILD_DIR:-$(mktemp -d)}"
+trap '[ -z "${CAI_BUILD_DIR:-}" ] && rm -rf "$OUT"' EXIT
 mkdir -p "$OUT"
 
 cc -std=c11 -Wall -Wextra -I"$ROOT/firmware/shared" \

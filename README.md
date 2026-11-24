@@ -11,7 +11,10 @@ chip-ai/
 │   ├── shared/           # BLE 帧协议 + 应用状态机
 │   ├── esp32/            # ESP-IDF + NimBLE GATT + TFLite Micro
 │   └── nrf52/            # nRF Connect SDK + Zephyr GATT
-├── mobile/flutter/       # iOS/Android BLE 客户端
+├── mobile/flutter/       # iOS/Android Flutter BLE 客户端
+├── android/              # Capacitor Android 移动端伴侣壳 (com.skat.chipai)
+├── index.html            # Web Bluetooth + 智能戒指/手杖穿戴伴侣控台 (同步至 www/)
+├── protocol.js           # JS BLE GATT 帧编解码 (与 cai_protocol.h 对齐)
 ├── tooling/              # 模型导出
 └── models/               # 模型与部署清单
 ```

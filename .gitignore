@@ -32,3 +32,19 @@ venv/
 models/**/*.tflite
 models/**/*.onnx
 !models/README.md
+
+# Build, cache & secret exclusions
+.env
+.env.*
+!.env.example
+node_modules/
+.npm-cache/
+.build/
+DerivedData/
+.gradle/
+android/app/build/
+android/build/
+android/.gradle/
+*.apk
+*.aab
+*.ipa

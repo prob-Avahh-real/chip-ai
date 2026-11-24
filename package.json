@@ -1,12 +1,22 @@
 {
   "name": "chip-ai",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
+    "build": "node scripts/build-web.js",
     "test:core": "bash scripts/test-core.sh",
     "test:protocol": "bash scripts/test-protocol.sh",
-    "test": "npm run test:core && npm run test:protocol",
+    "test:web": "node --test test/companion.test.mjs",
+    "test": "npm run test:core && npm run test:protocol && npm run test:web",
+    "sync:android": "npm run build && npx cap sync android",
     "export:stub": "python3 tooling/export_stub_model.py",
     "export:demo": "python3 tooling/export_demo_tflite.py",
     "test:flutter": "cd mobile/flutter && flutter test"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0"
   }
 }
